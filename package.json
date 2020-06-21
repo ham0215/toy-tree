@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ham0215/toy-tree/issues"
   },
-  "homepage": "https://github.com/ham0215/toy-tree#readme"
+  "homepage": "https://github.com/ham0215/toy-tree#readme",
+  "dependencies": {
+    "meow": "^7.0.1"
+  }
 }
