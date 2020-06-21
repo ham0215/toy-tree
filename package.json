@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ham0215/toy-tree#readme",
   "dependencies": {
+    "chalk": "^4.1.0",
     "meow": "^7.0.1"
   },
   "bin": {
