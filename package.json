@@ -4,6 +4,7 @@
   "description": "WEB+DB PRESS vol.117 2020 Javascriptで作るtreeコマンド",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {
@@ -22,7 +23,7 @@
     "meow": "^7.0.1"
   },
   "bin": {
-    "toy-tree": "src/bin.js"
+    "toy-tree": "dist/bin.js"
   },
   "jest": {
     "setupFiles": [
