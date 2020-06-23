@@ -3,6 +3,7 @@ import { read } from './read';
 import { format } from './format';
 import { DirectoryNode, Options } from './types'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Writer = (...args: any[]) => void;
 
 export const main = (argv: Array<string>, stdout: Writer, stderr: Writer): number => {
