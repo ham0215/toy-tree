@@ -5,7 +5,7 @@ import { DirectoryNode, Options } from './types'
 
 type Writer = (...args: any[]) => void;
 
-export const main = (argv: Array<string>, stdout: Writer, stderr: Writer) => {
+export const main = (argv: Array<string>, stdout: Writer, stderr: Writer): number => {
   const cli = meow(
     `
     Usage

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { TreeNode, Options, DirectoryNode } from './types'
 
-export const read = (dir: string, options: Options) => {
+export const read = (dir: string, options: Options): DirectoryNode => {
   let stat: fs.Stats;
 
   try {

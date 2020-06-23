@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { TreeNode, DirectoryNode } from './types';
 
-export const format = (node: DirectoryNode) => {
+export const format = (node: DirectoryNode): string => {
   return `${node.name}\n${formatEach(node.children, "")}`;
 };
 
