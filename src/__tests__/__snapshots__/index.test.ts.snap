@@ -11,7 +11,8 @@ exports[`toy-tree fixture 1`] = `
 |-- dir2
 |  |-- file1.txt
 |  |-- file2.txt
-|  \`-- file3.txt
+|  |-- file3.txt
+|  \`-- symlink -> ../dir1/nest1
 |-- file1.txt
 \`-- file2.txt
 "

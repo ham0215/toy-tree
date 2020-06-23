@@ -11,7 +11,11 @@ export interface DirectoryNode extends BaseNode<'directory'> {
   children: TreeNode[];
 }
 
-export type TreeNode = FileNode | DirectoryNode;
+export interface SymlinkNode extends BaseNode<'symlink'> {
+  link: string;
+}
+
+export type TreeNode = FileNode | DirectoryNode | SymlinkNode;
 
 export interface Options {
   level: number;
