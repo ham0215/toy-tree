@@ -7,6 +7,13 @@ ref: https://github.com/wadackel/toy-tree
 # install & run
 
 ```
+npm run build
 npm install --global
 toy-tree input
+```
+
+# run test
+
+```
+npm test
 ```
