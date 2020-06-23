@@ -3,13 +3,13 @@ interface BaseNode<T> {
   name: string;
 }
 
-export type FileNode = BaseNode<'file'>
+export type FileNode = BaseNode<"file">;
 
-export interface DirectoryNode extends BaseNode<'directory'> {
+export interface DirectoryNode extends BaseNode<"directory"> {
   children: TreeNode[];
 }
 
-export interface SymlinkNode extends BaseNode<'symlink'> {
+export interface SymlinkNode extends BaseNode<"symlink"> {
   link: string;
 }
 

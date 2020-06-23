@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import { TreeNode, Options, DirectoryNode } from './types'
+import fs from "fs";
+import path from "path";
+import { TreeNode, Options, DirectoryNode } from "./types";
 
 export const read = (dir: string, options: Options): DirectoryNode => {
   let stat: fs.Stats;
@@ -16,13 +16,13 @@ export const read = (dir: string, options: Options): DirectoryNode => {
   }
 
   const root: DirectoryNode = {
-    type: 'directory',
+    type: "directory",
     name: dir,
     children: readDirectory(dir, 1, options),
   };
 
   return root;
-}
+};
 
 const readDirectory = (dir: string, depth: number, options: Options) => {
   if (options.level < depth) {
@@ -36,28 +36,28 @@ const readDirectory = (dir: string, depth: number, options: Options) => {
   const nodes: TreeNode[] = [];
 
   dirents.forEach((dirent) => {
-    if (dirent.name.startsWith('.')) {
+    if (dirent.name.startsWith(".")) {
       return;
     }
 
     if (dirent.isFile()) {
       nodes.push({
-        type: 'file',
+        type: "file",
         name: dirent.name,
       });
     } else if (dirent.isDirectory()) {
       nodes.push({
-        type: 'directory',
+        type: "directory",
         name: dirent.name,
         children: readDirectory(
           path.join(dir, dirent.name),
           depth + 1,
-          options,
+          options
         ),
       });
     } else if (dirent.isSymbolicLink()) {
       nodes.push({
-        type: 'symlink',
+        type: "symlink",
         name: dirent.name,
         link: fs.readlinkSync(path.join(dir, dirent.name)),
       });
@@ -65,4 +65,4 @@ const readDirectory = (dir: string, depth: number, options: Options) => {
   });
 
   return nodes;
-}
+};
